@@ -8,6 +8,7 @@ body,
 .back {
     background-color: #333;
     position: relative;
+    overflow: hidden;
 }
 
 .card {
@@ -15,7 +16,7 @@ body,
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 200px;
     margin: auto;
     width: 400px;
     height: 300px;
@@ -30,17 +31,21 @@ body,
     background: #ffffff;
     color: #333;
 }
-.card:hover > .title{
+
+.card:hover>.title {
     opacity: 0;
 }
-.card:hover > .qrcode{
+
+.card:hover>.qrcode {
     right: -202px;
     opacity: 1;
 }
-.card:hover > .cqrcode{
+
+.card:hover>.cqrcode {
     left: -202px;
     opacity: 1;
 }
+
 .title {
     color: #ffffff;
     opacity: 1;
@@ -53,11 +58,12 @@ body,
     opacity: 0;
     width: 200px;
     position: absolute;
-    right:0;
+    right: 0;
     top: 17px;
     transition: right .5s;
 }
-.cqrcode{
+
+.cqrcode {
     opacity: 0;
     width: 200px;
     position: absolute;
@@ -82,4 +88,60 @@ body,
 .content {
     color: #333;
 
+}
+
+
+/*二维码列表*/
+.haha,
+.card:hover+.qrs>.mycode {
+    animation-name: lightSpeedIn;
+    animation-timing-function: ease-out;
+    animation-duration: 1.2s;
+}
+.hoho{
+    transform: translateX(2000px)
+}
+@keyframes lightSpeedIn {
+    from {
+        transform: translateX(2000px) rotateZ(-30deg);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    79% {
+        transform:translateX(0) rotateZ(-20deg)
+    }
+    80% {
+        transform:translateX(0) rotateZ(0)
+    }
+
+    85%{
+        transform: rotateZ(-3deg)
+    }
+    90% {
+        transform:translateX(0) rotateZ(0)
+    }
+    95%{
+        transform: rotateZ(-1deg)
+    }
+    to {
+        transform: translateX(0) rotateZ(0);
+    }
+}
+
+.qrs {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    padding: 0 100px;
+}
+
+.mycode {
+    width: 200px;
+    margin: 0 20px;
+    transform-origin: left bottom;
 }
