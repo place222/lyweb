@@ -6,10 +6,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const webpack = require('webpack')
 const devMode = process.env.NODE_ENV != 'production'
+const publicPath = devMode ? '' :'/'
 module.exports = {
     entry: './src/js/index.js',
     output: {
-        filename: './js/[name].[hash:8].js',
+        filename: 'js/[name].[hash:8].js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
@@ -19,7 +20,7 @@ module.exports = {
             template: './src/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: './css/[name].[hash:8].css'
+            filename: publicPath + 'css/[name].[hash:8].css'
         })
     ],
     module: {
@@ -42,7 +43,7 @@ module.exports = {
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        name: './imgs/[name].[hash:8].[ext]',
+                        name: publicPath + 'imgs/[name].[hash:8].[ext]',
                         limit: 500
                     }
                 }]
