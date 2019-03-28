@@ -5,3 +5,17 @@
 .show {
     display: block;
 }
+
+.center{
+    text-align: center;
+}
+.mt-20{
+    margin-top: 20px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+.fc-white {
+    color: #fff;
+}

@@ -1,4 +1,6 @@
-body,ul,h4 {
+body,
+ul,
+h4 ,p{
     margin: 0;
 }
 
@@ -8,4 +10,12 @@ body {
 
 ul {
     list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited{
+    color: #fff;
 }
