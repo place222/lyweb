@@ -5,16 +5,44 @@ body,
   height: 100%;
 }
 
-.nav{
+.nav {
   color: #ffffff;
   line-height: 30px;
-  font-size: 24px;
   position: absolute;
   z-index: 100;
   right: 0;
-  left: 80%;
+  left: 70%;
+  font-size: 20px;
   margin-top: 20px;
 }
+
+/* 媒体的分类 576 768 992 1200*/
+@media screen and (max-width:768px) {
+  .title {
+    font-size: 34px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .nav {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width:1200px) {}
+
+
+
 .back {
   background-color: #333;
   position: relative;
@@ -25,13 +53,16 @@ body,
   from {
     opacity: 1;
   }
+
   50% {
     opacity: 0.2;
   }
+
   to {
     opacity: 1;
   }
 }
+
 .card {
   position: absolute;
   left: 0;
@@ -56,7 +87,7 @@ body,
   color: #333;
 } */
 
-.card:hover > .title {
+.card:hover>.title {
   /* opacity: 0; */
 }
 
@@ -64,7 +95,6 @@ body,
   color: #ffffff;
   opacity: 1;
   line-height: 300px;
-  font-size: 60px;
   transition: all 0.5s;
 }
 
@@ -92,9 +122,11 @@ body,
   animation-timing-function: ease-out;
   animation-duration: 1.2s;
 }
+
 .hoho {
   transform: translateX(2500px);
 }
+
 @keyframes lightSpeedIn {
   from {
     transform: translateX(2000px) rotateZ(-30deg);
@@ -108,6 +140,7 @@ body,
   79% {
     transform: translateX(0) rotateZ(-20deg);
   }
+
   80% {
     transform: translateX(0) rotateZ(0);
   }
@@ -115,12 +148,15 @@ body,
   85% {
     transform: rotateZ(-3deg);
   }
+
   90% {
     transform: translateX(0) rotateZ(0);
   }
+
   95% {
     transform: rotateZ(-1deg);
   }
+
   to {
     transform: translateX(0) rotateZ(0);
   }
@@ -141,7 +177,7 @@ body,
 }
 
 
-.footer{
+.footer {
   color: #999;
   line-height: 26px;
   font-size: 12px;

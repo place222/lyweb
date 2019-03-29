@@ -9,6 +9,18 @@
 .center{
     text-align: center;
 }
+/* 字体大小 */
+
+.fs-20{
+    font-size: 20px;
+}
+.fs-24{
+    font-size: 24px;
+}
+.fs-26{
+    font-size: 26px;
+}
+
 .mt-20{
     margin-top: 20px;
 }
